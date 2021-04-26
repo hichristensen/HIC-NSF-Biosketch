@@ -1,0 +1,273 @@
+% Upper-case    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+% Lower-case    a b c d e f g h i j k l m n o p q r s t u v w x y z
+% Digits        0 1 2 3 4 5 6 7 8 9
+% Exclamation   !           Double quote "          Hash (number) #
+% Dollar        $           Percent      %          Ampersand     &
+% Acute accent  '           Left paren   (          Right paren   )
+% Asterisk      *           Plus         +          Comma         ,
+% Minus         -           Point        .          Solidus       /
+% Colon         :           Semicolon    ;          Less than     <
+% Equals        =           Greater than >          Question mark ?
+% At            @           Left bracket [          Backslash     \
+% Right bracket ]           Circumflex   ^          Underscore    _
+% Grave accent  `           Left brace   {          Vertical bar  |
+% Right brace   }           Tilde        ~
+
+%
+% NSF Biographical Sketch: Dr. Henrik I Christensen
+%
+% Copyright (c) 2021 Henrik I Christensen
+% All rights reserved.
+%
+
+\documentclass[svgnames,11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\renewcommand\thesection{(\alph{section})}
+\renewcommand\thesubsection{(\alph{subsection})}
+
+\usepackage{calc}
+
+\usepackage{lastpage}
+%\newcommand{\pageoflastpage}{Page {\thepage} of \pageref*{LastPage}}
+%\newcommand{\pageoflastpage}{{\thepage} of \pageref*{LastPage}}
+\newcommand{\pageoflastpage}{}
+
+% Redefine the plain pagestyle for the title page
+\makeatletter
+\let\oldps@plain\ps@plain
+\renewcommand{\ps@plain}{\oldps@plain%
+\renewcommand{\@evenfoot}{\hfil\pageoflastpage\hfil}%
+\renewcommand{\@oddfoot}{\@evenfoot}}
+\makeatother
+
+% Use fancy for non-title pages
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\cfoot{\pageoflastpage}
+\pagestyle{fancy}
+
+\usepackage{xspace}
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx}
+\usepackage{varioref}
+\usepackage[%
+        colorlinks=true,urlcolor=,
+        pdfpagelabels=true,hypertexnames=true,
+        plainpages=false,naturalnames=true,
+        ]{hyperref}
+%
+\usepackage{url}
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin={\bibhang+\widthof{[9]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=\textbf{\arabic*.},leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+\title{%
+        \vspace{-2\baselineskip}
+            \normalsize
+            Biographical Sketch\\
+            {\large\textbf{Dr.~Henrik~I.~Christensen}}\\
+            \vspace{0.5\baselineskip}
+            \hrule
+            \vspace{0.5\baselineskip}
+            Computer Science and Engineering, UC San Diego,\\
+            e-mail: \href{mailto:hichristensen@ucsd.edu}{hichristensen@ucsd.edu},
+            tel: +1-858-260-0570
+        \vspace{-1.5ex}
+        }
+\date{}
+\author{}
+
+\hypersetup{%
+        pdfsubject={NSF Biographical Sketch Henrik I.~Christensen},
+	pdfauthor={Dr.~Henrik I.~Christensen},
+        pdftitle={NSF Biographical Sketch of Dr.~Henrik I.~Christensen},
+        pdfkeywords={}
+        }
+
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\eg}{e.g.\xspace}
+
+\begin{document}
+
+\maketitle
+\vspace{-2\baselineskip}
+
+Dr.~Henrik I.~Christensen is the Qualcomm
+Chancellor's Chair of Robot Systems and a Distinguished Professor of
+Computer Science at Dept.~of Computer Science and Engineering UC San
+Diego. He is also the director of the Institute for Contextual
+Robotics. Prior to UC San Diego he was the founding director of
+Institute for Robotics and Intelligent machines (IRIM) at Georgia
+Institute of Technology (2006-2016). Dr.~Christensen does research on
+systems integration, human-robot interaction, mapping and robot
+vision. The research is performed within the Cognitive Robotics
+Laboratory. He has published more than 350 contributions across AI,
+robotics and vision. His research has a strong emphasis on "real
+problems with real solutions". A problem needs a theoretical model,
+implementation, evaluation, and translation to the real world. He is
+actively engaged in the setup and coordination of robotics research in
+the US (and worldwide). Dr.~Christensen received the Engelberger Award
+2011, the highest honor awarded by the robotics industry. He was also
+named the "Boeing Supplier of the Year 2011" while at Georgia Tech.
+Dr.~Christensen is a fellow of American Association for Advancement of
+Science (AAAS) and Institute of Electrical and Electronic Engineers
+(IEEE). He received an honorary doctorate in engineering from Aalborg
+University 2014.
+
+\subsection{Professional Preparation}
+ \begin{itemize}[label={\quad 9999--9999:},leftmargin=*,itemsep=0pt]
+    \item[1981]Technical College of Frederikshavn, Frederikshavn, Denmark;
+    Mechanical Engineering, Certificate;
+
+    \item[1987] Aalborg University, Aalborg, Denmark;
+    Electrical Engineering; M.~Sc.
+
+    \item[1990] Aalborg University, Aalborg, Denmark;
+    Electrical Engineering; Ph.D.
+  \end{itemize}
+  
+\subsection{Appointments}
+
+\begin{itemize}[label={\quad 9999--9999:},leftmargin=*,itemsep=0pt]
+    \item[2019--present;]
+        \textbf{Co-Founder}, Robust.AI, Palo Alto, CA
+        \item[2016--present:] \textbf{Distinguished Professor},
+        UC San Diego, La Jolla, CA
+
+    \item[2006-2016:] \textbf{Distinguished Professor},
+        Georgia Institute of Technology,
+        Atlanta, GA
+
+    \item[1996-2006:]
+        \textbf{Professor/Director},
+        Royal Institute of Technology,
+        Stockholm, Sweden 
+
+    \item[1996:]
+        \textbf{Visiting Professor},
+        University of Pennsylvania,
+        Philadelphia, PA
+        
+    \item[1992-1996:]
+      \textbf{Associate Professor},
+        Aalborg University,
+        Aalborg, Denmark
+        
+      \item[1990-1992:]
+        \textbf{Research Associate}
+        Aalborg University,
+        Aalborg, Denmark
+
+\end{itemize}
+
+\subsection{Products}
+
+\begin{bibenum}[itemsep=5pt]
+
+\item Paz, D., Lai, P.-J., Harish, S., Zhang, H., Chan, N., Hu, C.,
+  Binnani, S., and Christensen, H. Lessons learned from deploying
+  autonomous vehicles at UC San Diego. In Field and Service Robotics
+  (Tokyo, JP, August 2019).
+
+\item Qui, Y. C., Pal, A., and Christensen, H. I. Target driven visual
+  navigation exploiting object relationships. In The Conference on
+  Robotic Learning (Boston, MA, November 2020).
+
+\item  Paz, D., Zhang, H., Li, Q., Xiang, H., and Christensen, H. I.
+  Probabilistic semantic mapping for urban autonomous driving
+  applications. In International Conference on Intelligent Robots and
+  Systems (IROS) (Las Vegas, NV, Oct 2020), IEEE/RSJ
+
+\item Pal, A., Mondal, S., and Christensen, H. I. “looking at the
+  right stuff” - guided semantic-gaze for autonomous driving. In
+  Computer Vision and Pattern Recognition (CVPR) (Seattle, WA, June
+  2020), IEEE/PAMI.
+
+\item Pal, A., Nieto, C., and Christensen, H. I. DEDUCE: Diverse scEne
+  Detection methods in Unseen Challenging Environments. In
+  International Conference on Intelligent Robots and Systems (Macau,
+  Oct 2019), IEEE/RSJ.
+\end{bibenum}
+
+\vspace{\baselineskip}
+
+\noindent {\bf Other Significant Publications}
+\vspace{\baselineskip}
+
+\begin{bibenum}
+\item Christensen, H. I., and Hager, G. Sensing and estimation. In
+  Handbook of Robotics, B. Siciliano and O. Khatib, Eds. Springer
+  Verlag, Berlin Heidelberg New York, May 2016, ch. 4
+\item Christensen, H. I., and Nagel, H.-H., Cognitive Vision -
+  Sampling the Spectrum. No. 3948 in Lecture Notes in Computer
+  Science. Springer Verlag, Heidelberg, Apr. 2006
+\item Large, E. W., Christensen, H. I., and Bajcsy, R. Scaling the
+  dynamic approach to path planning and control: Competition among
+  behavioral constraints. Intl. Jour. of Robotics Research 18, 1 (Jan.
+  1999), 37-58.
+\item Christensen, H.I., Kruijff, J, and Wyatt, J., Cognitive Systems,
+  Sprinter Verlag, Heidelberg, April 2010.
+\item Berman, F., Rutenbar, R. A., Hailpern, B., Christensen, H.,
+  Davidson, S., Estrin, D., Franklin, M., Martonosi, M., Raghavan, P.,
+  Stodden, V., and Szalay, A. S. Realizing the potential of data
+  science. Communications of the ACM 61, 4 (Apr 2018), 67--72.
+
+\end{bibenum}  
+\subsection{Synergistic Activities}
+
+\begin{bibenum}[itemsep=4pt]
+  
+   \item \textbf{Editorships:}
+  
+  (i) EIC: Foundations and Trends in Robotics (2008-2020)\\
+  (ii) Board: IEEE PAMI, Intl. Jour of Robotics Research, Aut. Sys.,
+       Field and Service Robotics, AI Magazine, MIT Press (Robotics)
+      
+  \item \textbf{University service:}
+      
+    (i) Director of Robotics Centers (KTH: 1996-2016), (GT: 2006-2016), (UCSD: 2016--)\\
+    (ii) Coordinator of Robotics Education at UC San Diego (2018--)
+
+    \item \textbf{Community service:}
+      
+      (i) Editor of the US National Robotics Roadmap - 2009, 2013, 2016 and 2020.\\
+      (ii) Served on NSF CISE Advisory Board (2011-2014)\\
+      (iii) Served as US FIRST FRC Judge and Regional Board ((2007--) GA and CA)  \\
+      (iv)  Co-Chaired/Co-Program Chair for more than 35 IEEE conferences
+    \item \textbf{Mentoring:}
+      
+      (i) Mentored more than 40 PhD students and 100+ M.Sc students\\
+      (ii) Mentored 10+ undergraduate students to graduate admission\\
+      (iii) Mentored 10+ High School student research 
+
+\end{bibenum}
+
+
+\end{document}
+
+% Local Variables:
+% End:
